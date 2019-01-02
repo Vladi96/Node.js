@@ -44,8 +44,8 @@ let removeNote = (title) => {
 let readNotes = () => {
     let notes = fetchNote();
     let output = '-   -    -   ALL NOTES   -   -   -\n';
-    notes.forEach(note => {
-        output += `    ${note.title}: ${note.body}\n`;
+    notes.forEach((note, i) => {
+        output += `------- ${i + 1}:  ${note.title}: ${note.body} --------\n`;
     });
     if (notes.length === 0) {
         output += '   Empty list!\n';
