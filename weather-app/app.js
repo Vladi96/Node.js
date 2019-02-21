@@ -3,7 +3,7 @@ let geoCode = require('./getGioCode.js');
 let weather = require('./getWeather');
 
 
-geoCode.geoCode('tervel').then((response) => {
+geoCode.geoCode('Sofia').then((response) => {
     weather.getWeather(response.latitude, response.longitude).then((res) => {
         let currentTemperature = farentToCel(res.body.currently.temperature);
         let itsFeels = farentToCel(res.body.currently.apparentTemperature)
