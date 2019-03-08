@@ -10,7 +10,7 @@ let getWeather = (lat, lng) => {
             if (!body) {
                 reject({
                     error
-                })
+                });
             } else if (body) {
                 resolve({
                     body
